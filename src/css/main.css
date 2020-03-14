@@ -1,0 +1,184 @@
+body {
+  background: rgb(230,235,255);
+  background: -moz-linear-gradient(90deg, rgba(230,235,255,1) 0%, rgba(211,212,255,1) 2%, rgba(186,187,252,1) 7%, rgba(156,159,255,1) 14%, rgba(161,126,235,1) 23%, rgba(242,37,252,1) 43%, rgba(254,73,146,1) 61%, rgba(217,38,134,1) 83%, rgba(209,8,198,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(230,235,255,1) 0%, rgba(211,212,255,1) 2%, rgba(186,187,252,1) 7%, rgba(156,159,255,1) 14%, rgba(161,126,235,1) 23%, rgba(242,37,252,1) 43%, rgba(254,73,146,1) 61%, rgba(217,38,134,1) 83%, rgba(209,8,198,1) 100%);
+  background: linear-gradient(90deg, rgba(230,235,255,1) 0%, rgba(211,212,255,1) 2%, rgba(186,187,252,1) 7%, rgba(156,159,255,1) 14%, rgba(161,126,235,1) 23%, rgba(242,37,252,1) 43%, rgba(254,73,146,1) 61%, rgba(217,38,134,1) 83%, rgba(209,8,198,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6ebff",endColorstr="#d108c6",GradientType=1);
+
+  font-family: 'Segoe UI' !important;
+
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+}
+
+
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+} 
+
+p {
+  color: rgb(40, 40, 40);
+}
+
+#profile-image-div {
+  padding-top: 6rem;
+  margin: auto;
+  text-align: center;
+} 
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+#profile-image {
+  width: 13.5rem;
+  height: 13.5rem;
+  border-radius: 50%;
+}
+
+tr {
+  border: 0px !important;
+}
+
+tbody {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+/*
+---------------
+*/
+
+i {
+  margin: 2.75rem;
+  font-size: 4rem;
+}
+
+
+.white-button {
+  background: transparent;
+  font-weight: normal;
+  position: relative;
+  color: #3b3b3b;
+  border: 0px solid #DDD;
+  border-radius: 35%;
+  box-shadow: 0 0 0px #ccc;
+  font-family: 'Segoe UI';
+  margin: 0px;
+  padding: 0px;
+  transition: all .3s;
+  outline: none;
+
+  }
+  
+  .white-button:hover {
+  background: whitesmoke !important;
+  box-shadow: inset 2px -7px 11px rgba(80, 92, 51, 0.17) !important;
+  transform: translateY(-20px);
+  }
+  
+  .white-button:active {
+  border-bottom-color: #999;
+  background: whitesmoke !important;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2) !important;  
+  transform: translateY(-5px);  
+  }
+  
+  @media screen and (min-width: 566px){
+
+    .home-button {
+      margin-top: 3rem; 
+      margin-left: 4rem;
+      text-align: left;  
+    }
+}
+
+@media screen and (max-width: 565px){
+  .home-button {
+    text-align: center;
+  }
+}
+
+/*------------*/
+
+.projectCard {
+  text-align: center;
+  width: 25vh;
+  margin: auto;
+  margin: 30px 20px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  background-color: white;
+  display: inline-block;
+}
+
+.image-box {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 24vh;
+  height: 24vh;
+}
+
+.projectImg {
+  width: 25vh;
+  height: 25vh;
+
+}
+
+.image-box:hover .projectImg {
+  transform: scale(1.1);
+}
+
+.image-box .projectImg {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+}
+
+.projectWrites {
+  padding: 20px;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.projectDescription {
+  margin-bottom: 5px;
+  font-size: .87rem;
+}
+
+.projectPeriod {
+  margin-bottom: 10px;
+  font-size: .87rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
