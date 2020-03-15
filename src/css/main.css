@@ -1,3 +1,7 @@
+/*
+  Gradient descent, animazione fadeIn all'apertura
+*/
+
 body {
   background: rgb(230,235,255);
   background: -moz-linear-gradient(90deg, rgba(230,235,255,1) 0%, rgba(211,212,255,1) 2%, rgba(186,187,252,1) 7%, rgba(156,159,255,1) 14%, rgba(161,126,235,1) 23%, rgba(242,37,252,1) 43%, rgba(254,73,146,1) 61%, rgba(217,38,134,1) 83%, rgba(209,8,198,1) 100%);
@@ -12,8 +16,6 @@ body {
   animation-fill-mode: forwards; 
 }
 
-
-
 @keyframes fadeInAnimation { 
   0% { 
       opacity: 0; 
@@ -23,15 +25,13 @@ body {
    } 
 } 
 
-p {
+/*
+  Colore testo allineato, caratteristiche base di movimento
+*/
+
+h1, h2, h3, h4, h5, h6, p {
   color: rgb(40, 40, 40);
 }
-
-#profile-image-div {
-  padding-top: 6rem;
-  margin: auto;
-  text-align: center;
-} 
 
 .center {
   text-align: center;
@@ -45,18 +45,25 @@ p {
   text-align: right;
 }
 
+/*Immagine profilo */
+
+#profile-image-div {
+  padding-top: 6rem;
+  margin: auto;
+  text-align: center;
+} 
+
+
 #profile-image {
   width: 13.5rem;
   height: 13.5rem;
   border-radius: 50%;
 }
 
-tr {
-  border: 0px !important;
-}
+/*Bordi schifosi tabella*/
 
-tbody {
-  border: 0px;
+tbody, tr {
+  border: 0px !important;
   margin: 0px;
   padding: 0px;
 }
@@ -67,12 +74,14 @@ tbody {
 ---------------
 */
 
+/*Regolazione bottoni*/
+
 i {
   margin: 2.75rem;
   font-size: 4rem;
 }
 
-
+/*Crea un bottone traparente, che se passati col mouse sopra, si alza e diventa bianco*/
 .white-button {
   background: transparent;
   font-weight: normal;
@@ -102,13 +111,17 @@ i {
   transform: translateY(-5px);  
   }
   
-  @media screen and (min-width: 566px){
 
-    .home-button {
-      margin-top: 3rem; 
-      margin-left: 4rem;
-      text-align: left;  
-    }
+
+
+/*Regolazioni responsive del bottone di ritorno*/
+
+@media screen and (min-width: 566px){
+  .home-button {
+    margin-top: 3rem; 
+    margin-left: 4rem;
+    text-align: left;  
+  }
 }
 
 @media screen and (max-width: 565px){
@@ -118,6 +131,7 @@ i {
 }
 
 /*------------*/
+/*Card responsive*/
 
 .projectCard {
   text-align: center;
@@ -178,7 +192,3 @@ i {
   font-size: .87rem;
 }
 
-.title {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
