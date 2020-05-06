@@ -3,11 +3,14 @@
 */
 
 body {
+
+  
   background: rgb(230,235,255);
   background: -moz-linear-gradient(90deg, rgba(230,235,255,1) 0%, rgba(211,212,255,1) 2%, rgba(186,187,252,1) 7%, rgba(156,159,255,1) 14%, rgba(161,126,235,1) 23%, rgba(242,37,252,1) 43%, rgba(254,73,146,1) 61%, rgba(217,38,134,1) 83%, rgba(209,8,198,1) 100%);
   background: -webkit-linear-gradient(90deg, rgba(230,235,255,1) 0%, rgba(211,212,255,1) 2%, rgba(186,187,252,1) 7%, rgba(156,159,255,1) 14%, rgba(161,126,235,1) 23%, rgba(242,37,252,1) 43%, rgba(254,73,146,1) 61%, rgba(217,38,134,1) 83%, rgba(209,8,198,1) 100%);
   background: linear-gradient(90deg, rgba(230,235,255,1) 0%, rgba(211,212,255,1) 2%, rgba(186,187,252,1) 7%, rgba(156,159,255,1) 14%, rgba(161,126,235,1) 23%, rgba(242,37,252,1) 43%, rgba(254,73,146,1) 61%, rgba(217,38,134,1) 83%, rgba(209,8,198,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6ebff",endColorstr="#d108c6",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6ebff",endColorstr="#d108c6",GradientType=1); 
+
 
   font-family: 'Segoe UI' !important;
 
@@ -24,6 +27,21 @@ body {
       opacity: 1; 
    } 
 } 
+
+@keyframes fadeOutAnimation { 
+  0% { 
+      opacity: 1; 
+  } 
+  100% { 
+      opacity: 0; 
+   } 
+} 
+
+.disappear {
+  animation: fadeOutAnimation ease 1s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+}
 
 /*
   Colore testo allineato, caratteristiche base di movimento
@@ -112,7 +130,10 @@ i {
   }
   
 
-
+  .white-button:focus {
+    outline: none;
+    background: transparent; 
+}
 
 /*Regolazioni responsive del bottone di ritorno*/
 

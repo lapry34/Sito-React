@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
+
+Guarda se vuoi fare il curioso questo è il posto sbagliato
+
 User-agent: *
 Disallow:
