@@ -58,9 +58,9 @@ class Contatti extends React.Component {
                         <tr>
                             <td>
                                 <div className="center"> 
-                                    <Button onClick={btnCV} icona="fas fa-address-card" />
-                                    <Button onClick={btnLIN} icona="fab fa-linkedin" />
-                                    <Button onClick={btnGIT} icona="fab fa-github-square" />
+                                    <Button redirect="https://resume.io/r/vhINdooY5" icona="fas fa-address-card" />
+                                    <Button redirect="https://www.linkedin.com/in/gabriele-onorato-256924199/" icona="fab fa-linkedin" />
+                                    <Button redirect="https://github.com/lapry34" icona="fab fa-github-square" />
                                 </div>
                             </td>
                         </tr>
@@ -99,6 +99,19 @@ class Progetti extends React.Component {
         );
     }
 }
+
+class Button extends React.Component {
+
+
+    render() {
+
+        return (
+            <a href={this.props.redirect}><button className="white-button" onClick={this.props.onClick}><i className={this.props.icona}></i></button></a>
+        );
+    }
+
+}
+
 
 
 class Titolo extends React.Component {
@@ -142,20 +155,6 @@ class ProjCard extends React.Component {
     }
 }
 
-class Button extends React.Component {
-
-
-    render() {
-
-        return (
-            <button className="white-button" onClick={this.props.onClick}><i className={this.props.icona}></i></button>
-        );
-    }
-
-}
-
-
-
 function btnProgetti() {
     document.getElementById("index").classList.add("disappear");
     setTimeout(() => {ReactDOM.render(<Progetti/>, document.getElementById('root'))}, 500)
@@ -171,10 +170,5 @@ function btnContatti() {
     setTimeout(() => {ReactDOM.render(<Contatti/>, document.getElementById('root'))}, 500)
 }
 
-function btnCV() {window.location.href = "https://resume.io/r/vhINdooY5"}
-  
-  function btnLIN() {window.location.href = "https://www.linkedin.com/in/gabriele-onorato-256924199/";}
-  
-  function btnGIT() {window.location.href = "https://github.com/lapry34";}  
 
 export default Index;

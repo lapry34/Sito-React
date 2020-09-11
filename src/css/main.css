@@ -102,7 +102,7 @@ i {
   color: #3b3b3b;
   border: 0px solid #DDD;
   border-radius: 35%;
-  box-shadow: 0 0 0px #ccc;
+  box-shadow: 0px 0px 0px transparent;
   font-family: 'Segoe UI';
   margin: 0px;
   padding: 0px;
