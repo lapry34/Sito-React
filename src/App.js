@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import './css/main.css';
 import foto from './media/img/profilo.png';
 import lazio_innova from './media/img/lazio.png';
@@ -10,7 +10,20 @@ import zr from './media/img/zr.png';
 const name = "Gabriele Onorato";
 const profession = "Software Developer";
 
-
+class App extends React.Component {
+	render(){		
+	return (
+       <Router>
+            <Switch>
+                <Route path="/progetti" component={Progetti} />
+                <Route path="/contatti" component={Contatti} />
+                <Route path="/" component={Index} />
+                <Redirect from='*' to='/' />
+            </Switch>           
+       </Router>
+       );
+    }
+}
 class Index extends React.Component {
 	render(){		
 	return (
@@ -30,8 +43,10 @@ class Index extends React.Component {
                     <tr>
                         <td>
                             <div className="center">                   
-                                <Button onClick={btnContatti} icona="fas fa-address-book" style={{marginRight: "3em"}} />
-                                <Button onClick={btnProgetti} icona="fas fa-wrench"  />
+                                
+                                
+                                <Link to="/contatti"><Button  icona="fas fa-address-book" style={{marginRight: "3em"}} /></Link>
+                                <Link to="/progetti"><Button  icona="fas fa-wrench" /></Link>
                             </div>
                         </td>
                     </tr>
@@ -53,7 +68,7 @@ class Contatti extends React.Component {
                         <tr>
                             <td>
                                 <div className="home-button">
-                                    <Button onClick={btnHome} icona="fas fa-home" />
+                                    <Link to="/"><Button  icona="fas fa-home" /></Link>
                                 </div>
                             </td>
                         </tr>
@@ -83,7 +98,7 @@ class Progetti extends React.Component {
                     <tr>
                         <td>
                             <div className="home-button">
-                                <Button onClick={btnHome} icona="fas fa-home" />
+                                <Link to="/"><Button icona="fas fa-home" /></Link>
                             </div>
                         </td>
                     </tr>
@@ -91,9 +106,9 @@ class Progetti extends React.Component {
                         <td>
                             <div className="center">
                                 <ProjCard img={lazio_innova} title="Lazio Innova" desc="Regione Lazio" period="2018-2019" href="http://www.lazioinnova.it/startupper-school-academy/startupper-banchi-scuola/" />
-                                <ProjCard img={zr} title="ZeroRobotics" desc="MIT Programming Challenge" period="2018-2019" href="http://zerorobotics.mit.edu" />
+                                <ProjCard img={zr} title="ZeroRobotics" desc="MIT-NASA Programming Challenge" period="2018-2019" href="http://zerorobotics.mit.edu" />
                                 <ProjCard img={trashbot} title="TrashBot" desc="ITIS E. Fermi" period="2019-2020" href="https://trashbot.it" />
-                                <ProjCard img={drone} title="AidDrone" desc="Air Drone Service" period="2019-Now" href="#" />
+                                <ProjCard img={drone} title="AidDrone" desc="Air Drone Service" period="2020-Now" href="#" />
                             </div>
                         </td>
                     </tr>
@@ -159,20 +174,4 @@ class ProjCard extends React.Component {
     }
 }
 
-function btnProgetti() {
-    document.getElementById("index").classList.add("disappear");
-    setTimeout(() => {ReactDOM.render(<Progetti/>, document.getElementById('root'))}, 500)
-}
-
-function btnHome() {
-    document.getElementById("index").classList.add("disappear");
-    setTimeout(() => {ReactDOM.render(<Index/>, document.getElementById('root'))}, 500)
-}
-  
-function btnContatti() {    
-    document.getElementById("index").classList.add("disappear");
-    setTimeout(() => {ReactDOM.render(<Contatti/>, document.getElementById('root'))}, 500)
-}
-
-
-export default Index;
+export default App;
